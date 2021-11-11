@@ -29,7 +29,7 @@ const Header = () => {
                                 >
                                 Home
                                 </NavLink>
-                                <NavLink className="header-items"
+                                {/* <NavLink className="header-items"
                                 to="/addProduct"
                                 activeStyle={{
                                     fontWeight: "bold",
@@ -37,16 +37,8 @@ const Header = () => {
                                 }}
                                 >
                                 AddProduct
-                                </NavLink>
-                                <NavLink className="header-items"
-                                to="/purchase"
-                                activeStyle={{
-                                    fontWeight: "bold",
-                                    color: "red"
-                                }}
-                                >
-                                Purchase
-                                </NavLink>
+                                </NavLink> */}
+                                
                                 <NavLink className="header-items"
                                 to="/explore"
                                 activeStyle={{
@@ -56,9 +48,19 @@ const Header = () => {
                                 >
                                 Explore
                                 </NavLink>
-                                {user?.email ?
+                                {user?.email ? <>
+                                    <NavLink className="header-items"
+                                to="/dashboard"
+                                activeStyle={{
+                                    fontWeight: "bold",
+                                    color: "red"
+                                }}
+                                >
+                                Dashboard
+                                </NavLink>
                                 
                                 <button onClick={logOut}>Logout</button>
+                                </>
                                 :<NavLink className="header-items"
                                 to="/login"
                                 activeStyle={{
