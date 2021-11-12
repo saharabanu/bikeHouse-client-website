@@ -10,7 +10,7 @@ const Explore = () => {
     },[])
     return (
         <div>
-        <h2 className="text-primary">All Products Here</h2>
+        <h2 className="text-primary">All Products Here :{products.length}</h2>
         <div className="container">
 
             <div className="row row-cols-1 row-cols-md-3 g-4">

@@ -1,9 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Table } from "react-bootstrap";
+import { useForm } from "react-hook-form";
+import useAuth from '../../Hooks/useAuth';
 
 const ManageAllOrders = () => {
+    const {user} = useAuth();
     const [orders, setOrders] = useState([]);
+  const { register, handleSubmit } = useForm();
 
+  const [status, setStatus] = useState("");
+  const [orderId, setOrderId] = useState("");
+
+  
 
     
   useEffect(() => {
@@ -11,7 +19,11 @@ const ManageAllOrders = () => {
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);
-  console.log(orders);
+  
+  const handleOrderId = (id) => {
+    setOrderId(id);
+    
+  };
 
 
    // Delete Order
@@ -26,43 +38,74 @@ const ManageAllOrders = () => {
         .then(res => res.json())
         .then(data => {
             if (data.deletedCount) {
-                alert('Are You Sure To DELETE')
+                alert('DELETE successfully')
                 const remaining = orders.filter(order => order._id !== id);
                 setOrders(remaining);
             }
         })
     }
 }
-    return (
-        <div>
-            <h1 className="pt-4">All Orders Are Here:{orders.length}</h1>
-            <div className="row container text-center">
-                {
-                    orders?.map(order =><div key={order._id} className="col-md-6 col-lg-4">
-                        
-                    <div className=" bg-secondary text-white mb-3">
-                        
-                        <h4>Address : {order?.userAddress}</h4>
-                        <h4>Phone : {order?.phone}</h4>
-                        <p >{order?.email}</p>
-                        <img  className="w-50 h-50"src={order?.img} alt="" />
-                        <h5>{order?.name}</h5>
-                        <br />
-                        <h5>${order?.price}</h5>
-                        <br />
-                        {/* <p>{order?.description
-                        }</p>  */}
-                        <br />
-                      <button className="btn btn-danger mb-2" onClick={()=>handleDelete(order._id)}>Delete</button>
-                      <Link to="/"><button className="btn btn-success px-4 mb-2">Go Back</button></Link>
-                    </div>
-                  </div>
-                        
-                    )
-                }
-            </div>
 
-        </div>
+
+
+const onSubmit = (data) => {
+   
+    fetch(`http://localhost:5000/statusUpdate/${orderId}`, {
+      method: "PUT",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((result) => setStatus(result));
+  };
+    return (
+        <div className="container">
+      <h1>All orders {orders.length}</h1>
+
+      <Table striped bordered hover>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Product Title</th>
+            <th>Product Price</th>
+            {/* <th>Image Link</th> */}
+            <th>Status</th>
+            <th>Action</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        {orders?.map((order, index) => (
+          <tbody>
+            <tr>
+              <td>{index}</td>
+              <td>{order.name}</td>
+              <td>{order.price}</td>
+              {/* <td>{order.img}</td> */}
+             
+              <td>
+                <form onSubmit={handleSubmit(onSubmit)}>
+                  <select
+                    onClick={() => handleOrderId(order?._id)}
+                    {...register("status")}
+                  >
+                    <option value={order?.status}>{order?.status}</option>
+                    <option value="approve">approve</option>
+                    <option value="done">Done</option>
+                  </select>
+                  <input type="submit" />
+                </form>
+              </td>
+               
+
+              <button onClick={()=>handleDelete(order._id)} className="btn bg-danger p-2">Delete</button>
+              <button  className="btn bg-success p-2">update</button>
+              <td>{user?.email}</td>
+              
+            </tr>
+          </tbody>
+        ))}
+      </Table>
+    </div>
     );
 };
 

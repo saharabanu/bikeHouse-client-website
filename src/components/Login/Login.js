@@ -6,7 +6,7 @@ import useAuth from '../../Hooks/useAuth';
 
 const Login = () => {
   const {user,loginUser,signinWithGoogle,isLoading,error} = useAuth();
-    const { register, handleSubmit, watch, errors } = useForm();
+    const { register, handleSubmit, } = useForm();
     
       const location = useLocation();
       const history = useHistory();
