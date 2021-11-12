@@ -6,7 +6,7 @@ const AddProduct = () => {
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        fetch('http://localhost:5000/products',{
+        fetch('https://glacial-fortress-22682.herokuapp.com/products',{
             method:"POST",
             headers:{
                 'content-type': 'application/json'

@@ -14,7 +14,7 @@ const Purchase = () => {
    
     
     useEffect(()=>{
-        fetch(`http://localhost:5000/products/${productId}`)
+        fetch(`https://glacial-fortress-22682.herokuapp.com/products/${productId}`)
         .then(res=>res.json())
         .then(data=>{setProduct(data)})
 
@@ -30,7 +30,7 @@ const Purchase = () => {
 
 
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://glacial-fortress-22682.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

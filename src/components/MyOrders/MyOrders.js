@@ -8,7 +8,7 @@ const MyOrders = () => {
     
     const email = user?.email;
     useEffect(() => {
-        fetch(`http://localhost:5000/myOrders/${email}`)
+        fetch(`https://glacial-fortress-22682.herokuapp.com/myOrders/${email}`)
             .then(res => res.json())
             .then(data => setOrders(data));
     }, [email]);
@@ -18,7 +18,7 @@ const MyOrders = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if(proceed){
-        const url = `http://localhost:5000/deleteOrder/${id}`
+        const url = `https://glacial-fortress-22682.herokuapp.com/${id}`
         fetch(url, {
             method: "DELETE",
             headers: { "content-type": "application.json" }

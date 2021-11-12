@@ -15,7 +15,7 @@ const ManageAllOrders = () => {
 
     
   useEffect(() => {
-    fetch("http://localhost:5000/orders")
+    fetch("https://glacial-fortress-22682.herokuapp.com/orders")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);
@@ -31,7 +31,7 @@ const ManageAllOrders = () => {
    const handleDelete = id => {
     const proceed = window.confirm('Are you sure, you want to delete?');
     if(proceed){
-    const url = `http://localhost:5000/deleteOrder/${id}`
+    const url = `https://glacial-fortress-22682.herokuapp.com/deleteOrder/${id}`
     fetch(url, {
         method: "DELETE",
         headers: { "content-type": "application.json" }
@@ -51,7 +51,7 @@ const ManageAllOrders = () => {
 
 const onSubmit = (data) => {
    
-    fetch(`http://localhost:5000/statusUpdate/${orderId}`, {
+    fetch(`https://glacial-fortress-22682.herokuapp.com/statusUpdate/${orderId}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
