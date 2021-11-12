@@ -27,22 +27,24 @@ const Dashboard = () => {
                         color: "red"}} >
                              Home
                     </NavLink>
-                    <h5 className="text-dark">Customer Dashbord Part</h5>
-            
-                    
+                    {!admin && <><h5 className="text-dark">Customer Dashbord </h5>
+        
                     <li className="dashboard-menu mb-2"><Link style={{textDecoration:'none'}} to={`${url}`}>Dashboard</Link></li>
 
                     <li className="dashboard-menu mb-2"><Link style={{textDecoration:'none'}} to={`${url}/payment`}>PAY</Link></li>
 
                     <li className="dashboard-menu mb-2"><Link style={{textDecoration:'none'}} to={`${url}/myOrders`}>My Orders</Link></li>
 
-                    <li className="dashboard-menu mb-2"><Link style={{textDecoration:'none'}} to={`${url}/reviews`}>Reviews</Link></li>
+                    <li className="dashboard-menu mb-2"><Link style={{textDecoration:'none'}} to={`${url}/reviews`}>Reviews</Link></li></>}
+                            <br />
+                        <button className="dashboard-menu border-0 btn btn-danger mb-2" onClick={logOut}>LogOut</button>
 
-                        <button className="dashboard-menu border-0 mb-2" onClick={logOut}>LogOut</button>
+                        
 
-                        <h5 className="text-dark">Admin Dashboard part</h5>
-
-                    { admin && <><li className="dashboard-menu mb-2"><Link style={{textDecoration:'none'}} to={`${url}/manageAllOrders`}>Manage All Orders</Link></li>
+                    { admin && <>
+                    
+                        <h5 className="text-dark">Admin Dashboard </h5>
+                    <li className="dashboard-menu mb-2"><Link style={{textDecoration:'none'}} to={`${url}/manageAllOrders`}>Manage All Orders</Link></li>
 
                     <li className="dashboard-menu mb-2"><Link style={{textDecoration:'none'}} to={`${url}/addProduct`}>Add a Product</Link></li>
 

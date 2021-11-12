@@ -43,7 +43,7 @@ const Purchase = () => {
                 if(data.insertedId){
                     alert('your order has done successfuly')
                 }
-                console.log(data)
+                
                 setPerson(data)
             })
 

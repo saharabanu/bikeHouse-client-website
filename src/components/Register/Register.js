@@ -8,7 +8,7 @@ const Register = () => {
   
   const history = useHistory();
     
-    const { register, handleSubmit, watch, errors } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const {user,registerUser,isLoading,error} = useAuth();
 
     
@@ -19,7 +19,8 @@ const Register = () => {
         alert('Your password does not match')
         return
       }
-      registerUser(data.email,data.password,data.name,history)
+      registerUser(data.email,data.password,data.name,history);
+      reset()
        
         
         // console.log(data);

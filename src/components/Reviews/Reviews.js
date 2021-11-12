@@ -14,9 +14,16 @@ const Reviews = () => {
       body: JSON.stringify(data),
     })
       .then((res) => res.json())
-      .then((result) => console.log(result));
-
-    console.log(data);
+      .then((result) => {
+        if(result.insertedId){
+          alert('Added Successfully')
+          
+        }
+        
+        
+      });
+        
+    
     reset()
   };
  

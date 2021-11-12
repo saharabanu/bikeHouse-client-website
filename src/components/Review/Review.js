@@ -12,7 +12,7 @@ const Review = () => {
 
     return (
         <div className=" bg-success p-4 text-light mb-5 mt-5">
-            <h1>Consumer reviews</h1>
+            <h1>Customer reviews</h1>
             <div className="row mx-auto">
                 {
                     reviews.map(userReview =>

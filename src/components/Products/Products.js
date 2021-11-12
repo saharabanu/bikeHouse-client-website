@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Product from '../Product/Product';
+import './Products.css';
 
 
 const Products = () => {
@@ -10,7 +11,7 @@ const Products = () => {
         .then(data=>setProducts(data))
     },[])
     return (
-        <div>
+        <div className="products">
             <h2 className="text-primary">SELECT YOUR OWN BIKE</h2>
             <div className="container">
 

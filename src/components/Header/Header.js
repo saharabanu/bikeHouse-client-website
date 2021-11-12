@@ -29,15 +29,7 @@ const Header = () => {
                                 >
                                 Home
                                 </NavLink>
-                                {/* <NavLink className="header-items"
-                                to="/addProduct"
-                                activeStyle={{
-                                    fontWeight: "bold",
-                                    color: "red"
-                                }}
-                                >
-                                AddProduct
-                                </NavLink> */}
+                                
                                 
                                 <NavLink className="header-items"
                                 to="/explore"
