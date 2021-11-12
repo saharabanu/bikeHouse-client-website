@@ -40,7 +40,7 @@ const MyOrders = () => {
                 {
                     orders?.map(order =><div key={order._id} className="col-md-6 col-lg-4">
                         
-                    <div className=" bg-secondary text-white">
+                    <div className=" bg-secondary text-white mb-3">
                         
                         <h4>Address : {order?.userAddress}</h4>
                         <h4>Phone : {order?.phone}</h4>

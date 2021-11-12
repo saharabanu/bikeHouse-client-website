@@ -6,6 +6,8 @@ import './App.css';
 import AddProduct from './components/AddProduct/AddProduct';
 import Dashboard from './components/Dashboard/Dashboard';
 import Explore from './components/Explore/Explore';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import ManageAllOrders from './components/ManageAllOrders/ManageAllOrders';
@@ -20,6 +22,7 @@ function App() {
     <div className="App">
       <AuthProvider>
       <Router>
+        <Header></Header>
       <Switch>
         <Route exact path="/">
           <Home></Home>
@@ -52,6 +55,7 @@ function App() {
           <NotFound></NotFound>
         </Route>
       </Switch>
+      <Footer></Footer>
     </Router>
     </AuthProvider>
     

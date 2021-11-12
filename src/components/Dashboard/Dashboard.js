@@ -55,7 +55,7 @@ const Dashboard = () => {
                     </div>
                     
                 </div>
-                <div className=" col-12 col-md-9">
+                <div className="col-md-9">
                     
                     <Switch>
                             <Route exact path={path}>
