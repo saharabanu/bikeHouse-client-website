@@ -40,18 +40,17 @@ const MyOrders = () => {
                 {
                     orders?.map(order =><div key={order._id} className="col-md-6 col-lg-4">
                         
-                    <div className=" bg-secondary text-white mb-3">
-                        
+                    <div className=" bg-light bg-gradient  mb-3">
+                        <img  className="w-50 h-50"src={order?.img} alt="" />
                         <h4>Address : {order?.userAddress}</h4>
                         <h4>Phone : {order?.phone}</h4>
                         <p >{order?.email}</p>
-                        <img  className="w-50 h-50"src={order?.img} alt="" />
                         <h5>{order?.name}</h5>
-                        <br />
+                        
                         <h5>${order?.price}</h5>
-                        <br />
+                        
                         <h6 className="text-dark">{order?.status}</h6>
-                        <br />
+                        
                         {/* <p>{order?.description
                         }</p>  */}
                         <br />

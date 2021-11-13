@@ -7,12 +7,12 @@ const Header = () => {
     const {user,logOut} = useAuth();
     return (
         
-        <div className="header-container ">
+        <div className="header-container bg-dark ">
             <div className="header container">
                 <div className="row">
                     <div className="col-md-2">
                         <div>
-                            <img className="w-75" src="https://cdn.shopify.com/s/files/1/0366/2325/3549/files/logo.png?v=1585015777" alt="" />
+                            <img className="w-75" src="https://elementorpress.com/templatekit-pro/layout08/wp-content/uploads/2020/12/logo-1.png" alt="" />
                             </div>
                         
                     </div>

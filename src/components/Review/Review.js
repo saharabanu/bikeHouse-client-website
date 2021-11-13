@@ -14,7 +14,7 @@ const Review = () => {
     }, [])
 
     return (
-        <div className="bg-dark py-5 mb-3 mt-3">
+        <div className="bg-secondary py-5 mb-3 mt-3">
         <Container>
             <h1 className="my-5">Buyers Review...</h1>
         {

@@ -11,7 +11,7 @@ const Products = () => {
         .then(data=>setProducts(data))
     },[])
     return (
-        <div className="products">
+        <div className="products bg-light bg-gradient">
             <h2 className="text-primary">SELECT YOUR OWN BIKE</h2>
             <div className="container">
 

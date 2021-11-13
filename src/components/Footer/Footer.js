@@ -4,13 +4,14 @@ import News from '../News/News';
 const Footer = () => {
     return (
         
-        <div className="mt-5 footer bg-primary text-white ">
+        <div className="mt-5 footer bg-dark text-white ">
             <News></News>
       <div className="">
         <div className="row container p-5">
           <div className="col-md-3  ">
             <div className="first-cart p-2 mt-2">
-              <h6>Services</h6>
+              <h3 className="text-danger fw-bold"
+              >Services</h3>
               <p>E-bike repair</p>
               <p>Worldwide Shipping</p>
               <p>Free Return</p>
@@ -20,7 +21,8 @@ const Footer = () => {
           </div>
           <div className="col-md-3">
             <div className="second-part">
-              <h6 className="mb-3">The good stuff in your inbox</h6>
+              <h3 className="text-danger fw-bold mb-3"
+               >The good stuff in your inbox</h3>
                 <p>News & updates from E-bike. <br />
                     No spam, we promise.</p>
               <input
@@ -43,7 +45,8 @@ const Footer = () => {
           </div>
           <div className="col-md-3">
             <div className="third-part">
-              <h6>Useful Links</h6>
+              <h3 className="text-danger fw-bold"
+              >Useful Links</h3>
               <p >About</p>
               <p>Features</p>
               <p>Variations</p>
@@ -54,7 +57,8 @@ const Footer = () => {
           </div>
           <div className="col-md-3">
             <div className="fourth-part">
-              <h6>Contact Us</h6>
+              <h3 className="text-danger fw-bold"
+              >Contact Us</h3>
               <small className="mt-5">Address: <br /> 121 King Street Motijhil, 3000, Dhaka</small>
               <br />
               <small className="mt-3">Phone: <br />01754634526</small>

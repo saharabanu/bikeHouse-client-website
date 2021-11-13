@@ -9,11 +9,7 @@ const Payment = () => {
     const [acc,setAcc] = useState('')
     const [method,setMethod] = useState('')
 
-    // useEffect(()=> {
-    //     fetch(http://localhost:7000/orders/${user?.email})
-    //     .then(res => res.json())
-    //     .then(data => setAllMyOrders(data))
-    // },[user?.email])
+    
 
     let price = 0;
     for (const iterator of allMyOrders) {
@@ -44,10 +40,10 @@ const Payment = () => {
     return (
         <Container>
             <small className="text-light">#pay_bill</small>
-            {/* <div style={{height:'60vh'}} className="d-flex align-items-center justify-content-between"> */}
+            
                 <div className="row mt-5 py-5">
                 <div className="col-12 col-md-6 text-center">
-                    <h3 className="text-danger">This page is under construction.........</h3>
+                    <h3 className="text-danger">Payment System Coming Soon</h3>
                         <h3>Total Price : {price}</h3>
                         <div className="w-100 mx-auto">
                         <img src="https://web.programming-hero.com/static/media/ssl-commerce.1d268dce.png" alt="" className="w-100 mx-auto" />
@@ -90,7 +86,7 @@ const Payment = () => {
                     </div>
                     
                 </div>
-            {/* </div> */}
+           
         </Container>
     );
 };

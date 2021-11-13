@@ -4,3 +4,6 @@
 h5{
     color:darksalmon;
 }
+.product:hover{
+    background-color: burlywood;
+}

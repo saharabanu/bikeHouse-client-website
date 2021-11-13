@@ -28,7 +28,7 @@ const CompanyPartners = () => {
            <hr />
            <div className=" row container">
                {
-                bikePartners.map(bikePartner=><div className=" col-12 col-md-3">
+                bikePartners.map(bikePartner=><div key={bikePartner.id} className=" col-12 col-md-3">
                 <div>
                     <img src={bikePartner.img} alt="" />
                 </div>
