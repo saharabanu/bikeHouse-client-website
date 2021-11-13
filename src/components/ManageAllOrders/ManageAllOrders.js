@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from "react-bootstrap";
-import { useForm } from "react-hook-form";
-import useAuth from '../../Hooks/useAuth';
 
 const ManageAllOrders = () => {
-    const {user} = useAuth();
+    
     const [orders, setOrders] = useState([]);
-  const { register, handleSubmit } = useForm();
-
-  const [status, setStatus] = useState("");
-  const [orderId, setOrderId] = useState("");
+  
 
   
 
@@ -18,12 +13,9 @@ const ManageAllOrders = () => {
     fetch("https://glacial-fortress-22682.herokuapp.com/orders")
       .then((res) => res.json())
       .then((data) => setOrders(data));
-  }, []);
+  }, [orders]);
   
-  const handleOrderId = (id) => {
-    setOrderId(id);
-    
-  };
+ 
   
 
 
@@ -47,18 +39,29 @@ const ManageAllOrders = () => {
     }
 }
 
-
-
-const onSubmit = (data) => {
-   
-    fetch(`https://glacial-fortress-22682.herokuapp.com/statusUpdate/${orderId}`, {
+const handleApprove =(id)=>{
+  const proceed = window.confirm('Are you sure to cofirm the order?');
+  if(proceed){
+    const url = `https://glacial-fortress-22682.herokuapp.com/orders/${id}`
+    fetch(url, {
       method: "PUT",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(data),
+        headers: { "content-type": "application.json" },
+        body : JSON.stringify()
+        
+
     })
-      .then((res) => res.json())
-      .then((result) => setStatus(result));
-  };
+    .then(res=>res.json())
+    .then(data=>{
+      if(data.modifiedCount){
+        alert('Shipped completed')
+      }
+      
+      console.log(data)})
+  }
+}
+
+
+
     return (
         <div className="container">
       <h1>All orders {orders.length}</h1>
@@ -84,21 +87,11 @@ const onSubmit = (data) => {
               {/* <td>{order.img}</td> */}
              
               <td>
-                <form onSubmit={handleSubmit(onSubmit)}>
-                  <select
-                    onClick={() => handleOrderId(order?._id)}
-                    {...register("status")}
-                  >
-                    <option value={order?.status}>{order?.status}</option>
-                    <option value="approve">approved</option>
-                    <option value="done">Done</option>
-                  </select>
-                  <input type="submit" />
-                </form>
+              <button onClick={()=>handleApprove(order._id)} className="btn btn-success p-2">{order.status}</button>
               </td>
                
-
-              <button onClick={()=>handleDelete(order._id)} className="btn bg-danger p-2">Delete</button>
+ 
+              <button onClick={()=>handleDelete(order._id)} className="btn bg-danger p-2">Delete</button> 
               
               <td>{order?.email}</td>
               

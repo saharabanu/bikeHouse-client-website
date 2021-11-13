@@ -2,7 +2,7 @@
 
 ## Live Site Link : https://niche-product-b3e34.web.app/
 
-### My Websit Name : BicycleHouse
+### My Websit Name : BikeHouse
 
 ### Description : Our Website is about bicycle.It is the best website for selling bicycle beacause our service and manage system are always good.Moat of the customers review good.
 
@@ -16,7 +16,7 @@
 
 ## 4. Our Cycle can help you  to reward individuals and businesses for their commitment to cleaner air, personal health, and the use of pedaling energy in order to create a more sustainable community.
 
-## 5:BicycleHouse is a trusted partner of bike manufacturers all over the world. It’s the natural choice for your e-bike
+## 5:BikeHouse is a trusted partner of bike manufacturers all over the world. It’s the natural choice for your e-bike
 
 ## 6: Travel anywhere in Europe, a BicycleHouse dealer won't be far away. Support is always close at hand.
 

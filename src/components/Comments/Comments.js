@@ -38,7 +38,7 @@ const usersComments = [
 
 const Comments = () => {
     return (
-        <div className=" py-5  bg-light bg-gradient">
+        <div className=" py-5  bg-info bg-gradient mb-5">
             <div className="container">
                 <div className="w-75 mx-auto">
                     <h1>What people say about us</h1>

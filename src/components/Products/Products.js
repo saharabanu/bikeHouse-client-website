@@ -13,6 +13,7 @@ const Products = () => {
     return (
         <div className="products bg-light bg-gradient">
             <h2 className="text-primary">SELECT YOUR OWN BIKE</h2>
+            <p>There are a lot of bicycles in our BikeHouse. Facinate, attarctive, and flavoures bicycle are wait for You.</p>
             <div className="container">
 
                 <div className="row row-cols-1 row-cols-md-3 g-4">

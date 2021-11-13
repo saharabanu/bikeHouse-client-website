@@ -3,7 +3,9 @@ import {
   BrowserRouter as Router, Route, Switch
 } from "react-router-dom";
 import './App.css';
+import AboutUs from './components/AboutUs/AboutUs';
 import AddProduct from './components/AddProduct/AddProduct';
+import ContactUs from './components/ContactUs/ContactUs';
 import Dashboard from './components/Dashboard/Dashboard';
 import Explore from './components/Explore/Explore';
 import Footer from './components/Footer/Footer';
@@ -41,6 +43,12 @@ function App() {
         </PrivateRoute>
         <Route path="/explore">
           <Explore></Explore>
+        </Route>
+        <Route path="/aboutUs">
+          <AboutUs></AboutUs>
+        </Route>
+        <Route path="/contactUs">
+          <ContactUs></ContactUs>
         </Route>
         <PrivateRoute path="/dashboard">
           <Dashboard></Dashboard>

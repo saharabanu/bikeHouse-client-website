@@ -49,10 +49,6 @@ const MyOrders = () => {
                         
                         <h5>${order?.price}</h5>
                         
-                        <h6 className="text-dark">{order?.status}</h6>
-                        
-                        {/* <p>{order?.description
-                        }</p>  */}
                         <br />
                       <button className="btn btn-danger mb-2" onClick={()=>handleDelete(order._id)}>Delete</button>
                       <Link to="/"><button className="btn btn-success px-4 mb-2">Go Back</button></Link>

@@ -40,6 +40,24 @@ const Header = () => {
                                 >
                                 Explore
                                 </NavLink>
+                                <NavLink className="header-items"
+                                to="/aboutUs"
+                                activeStyle={{
+                                    fontWeight: "bold",
+                                    color: "red"
+                                }}
+                                >
+                                AboutUs
+                                </NavLink>
+                                <NavLink className="header-items"
+                                to="/contactUs"
+                                activeStyle={{
+                                    fontWeight: "bold",
+                                    color: "red"
+                                }}
+                                >
+                                ContacttUs
+                                </NavLink>
                                 {user?.email ? <>
                                     <NavLink className="header-items"
                                 to="/dashboard"
