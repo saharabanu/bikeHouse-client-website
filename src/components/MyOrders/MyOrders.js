@@ -50,6 +50,8 @@ const MyOrders = () => {
                         <br />
                         <h5>${order?.price}</h5>
                         <br />
+                        <h6 className="text-dark">{order?.status}</h6>
+                        <br />
                         {/* <p>{order?.description
                         }</p>  */}
                         <br />

@@ -90,7 +90,7 @@ const onSubmit = (data) => {
                     {...register("status")}
                   >
                     <option value={order?.status}>{order?.status}</option>
-                    <option value="approve">approve</option>
+                    <option value="approve">approved</option>
                     <option value="done">Done</option>
                   </select>
                   <input type="submit" />
@@ -99,8 +99,8 @@ const onSubmit = (data) => {
                
 
               <button onClick={()=>handleDelete(order._id)} className="btn bg-danger p-2">Delete</button>
-              <button  className="btn bg-success p-2">update</button>
-              <td>{user?.email}</td>
+              
+              <td>{order?.email}</td>
               
             </tr>
           </tbody>

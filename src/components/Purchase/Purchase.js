@@ -76,7 +76,7 @@ const Purchase = () => {
                         <input className="mb-3" required placeholder="phone number" type="number" {...register("phone")} />
                         <br />
                         
-                        <input className="mb-3" required placeholder="Name" {...register("serviceName")} defaultValue={product.name} />
+                        <input className="mb-3" required placeholder="Name" {...register("productName")} defaultValue={product.name} />
                         <br />
                         <input className="mb-3" required placeholder="img" {...register("img")} defaultValue={product.img} />
                         <br />
