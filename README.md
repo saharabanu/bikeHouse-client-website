@@ -6,7 +6,7 @@
 
 #### Fetures 1: Customer can buy any bicycle as  your like and can order frequently and also can pay with any credit or debit card and BKhas or Nogod.
 
-## 2 : we take return free any selling cycle if  it is wrong.
+#### 2 : we take return free any selling cycle if  it is wrong.
 
 
 #### 3 :An Admin can add and delete products and also manage all orders.

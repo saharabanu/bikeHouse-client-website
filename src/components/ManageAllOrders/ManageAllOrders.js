@@ -65,7 +65,7 @@ const handleApprove =(id)=>{
     return (
         <div className="container">
       <h1>All orders {orders.length}</h1>
-
+      <div className="table-responsive">
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -99,6 +99,7 @@ const handleApprove =(id)=>{
           </tbody>
         ))}
       </Table>
+      </div>
     </div>
     );
 };
