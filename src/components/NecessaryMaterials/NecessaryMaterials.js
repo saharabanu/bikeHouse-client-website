@@ -42,13 +42,13 @@ const items = [
 const NecessaryMaterials = () => {
     return (
         <div className="container mt-5 mb-5 bg-light bg-gradient">
-            <h2 className="fw-bold">SEE WHAT THOSE NEED FOR YOUR DRIVING SECURITY</h2>
+            <h4 className="fw-bold pb-3">SEE WHAT THOSE NEED FOR YOUR DRIVING SECURITY</h4>
             <div className="row ">
                 {items.map(item=><div key={item.id} className="col-md-4 mb-3">
-                    <div className="border h-100  shadow">
+                    <div className="border h-100  shadow ">
                         <img src={item.img} alt="" />
                         <h4>{item.title}</h4>
-                        <p>{item.shortDesc}</p>
+                        <p className='text-start px-3'>{item.shortDesc}</p>
                     </div>
 
                     </div>

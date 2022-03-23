@@ -9,6 +9,7 @@
     /* margin-top:20px; */
     margin-bottom:30px;
   }
-   h1{
+   .banner-image h1{
     color:lightcoral ;
+    padding-top: 50px;
   }

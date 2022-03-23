@@ -6,12 +6,12 @@ const Footer = () => {
         
         <div className="mt-5 footer bg-dark text-white ">
             <News></News>
-      <div className="">
-        <div className="row container p-5">
+      <div className="text-start">
+        <div className="row container mx-auto p-5">
           <div className="col-md-3  ">
             <div className="first-cart p-2 mt-2">
               <h3 className="text-danger fw-bold"
-              >Services</h3>
+              >Bike House Services</h3>
               <p>E-bike repair</p>
               <p>Worldwide Shipping</p>
               <p>Free Return</p>
@@ -59,19 +59,19 @@ const Footer = () => {
             <div className="fourth-part">
               <h3 className="text-danger fw-bold"
               >Contact Us</h3>
-              <small className="mt-5">Address: <br /> 121 King Street Motijhil, 3000, Dhaka</small>
-              <br />
-              <small className="mt-3">Phone: <br />01754634526</small>
-              <br />
-              <small className="mt-3">Fax: <br /> 08) 08 4752 1499</small>
-              <br />
-              <small className="mt-3">Email: <br /> ebikeofficedh@gmail.com</small>
+              <p className="">Address:  121 King Street Motijhil, 3000, Dhaka</p>
+             
+              <p className="mt-3">Phone: 01754634526</p>
+              
+              <p className="mt-3">Fax:  08) 08 4752 1499</p>
+              
+              <p className="mt-3">Email:  ebikeofficedh@gmail.com</p>
             </div>
           </div>
         </div>
         <hr />
         <div className="botton text-center">
-          <small>Website by Sahara. Copyright E-bike</small>
+          <small>Bike-House Website . Copyright by Sahara</small>
         </div>
       </div>
     </div>

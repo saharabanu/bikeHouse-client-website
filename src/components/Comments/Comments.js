@@ -39,12 +39,12 @@ const usersComments = [
 const Comments = () => {
     return (
         <div className=" py-5  bg-info bg-gradient mb-5">
-            <div className="container">
+            <div className="container ">
                 <div className="w-75 mx-auto">
                     <h1>What people say about us</h1>
                     <p className=" text-center pb-5">Where do business owners struggle? Brainstorming how to ask for the review in the text. There’s a valid fear of not knowing what to say. At the very least, you could simply</p>
                 </div>
-                <div className="row container">
+                <div className="row container text-start">
                     
                         <div className=" col-12 col-md-6">
                             <div>
